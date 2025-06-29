@@ -57,7 +57,7 @@ func printUpdateInfo(w io.Writer, goPath, pkg string) error {
 		color.Set(color.FgGreen)
 	}
 
-	fmt.Fprintf(w, "%-32s %-64s %-64s %s\n", pkg, b.Path, b.Main.Version, latestVersion)
+	fmt.Fprintf(w, "%-32s %-64s %-16.15s %-16.15s\n", pkg, b.Path, b.Main.Version, latestVersion)
 	color.Unset()
 
 	return err
